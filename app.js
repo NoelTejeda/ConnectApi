@@ -60,5 +60,23 @@ la petición
 
 Cuando se usa fetch nos vá a devolver una promesa, y esa promesa se está guardando en la variable respuesta.
 
+la promesa significa que se está haciendo una petición, pero en este caso tenemos que esperar que esta acabe antes
+de hacer algo, y es que cuandoo hacemos una petición al sevidor, nosotros le enviamos lo que queremos como la 
+información de una pelicula, el servidor tiene que procesar esa petición, etc. y nos vá a devolver la información,
+pero todo esto tarda tiempo, no es instántaneo, entonces tenemos que esperar y esto lo hacemos con la palabra "await"
 
+si se quiere usar await solo se puede usar con las funciones asincronas (async) que es sólo colocarle la palabra
+async. entonces quedaria así:
+
+	const cargarPeliculas = async () => {
+	try {
+		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=${pagina}`);
+
+		 console.log(respuesta);
+	
+	----------------------------------------------------------------
+	----------------------------------------------------------------
+
+	cuando se trabaja con funciones asincronas se deberia trabajar con try catch. para que el caso de que no se ejecute. podamos atraparlo y mostrarlo. 
+	
  */
