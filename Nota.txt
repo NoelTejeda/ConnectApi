@@ -1,0 +1,5 @@
+Para conectarse a una api son necesario 2 cosas:
+    + un enlace a la api
+    + una llave
+
+    como opción en la 
